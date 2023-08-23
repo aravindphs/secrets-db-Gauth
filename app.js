@@ -9,9 +9,17 @@ const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require("mongoose-findorcreate");
+const cors = require("cors");
 
 const app = express();
 const port = process.env.PORT;
+app.use(cors(
+    {
+        origin: ["https://secrets-db-gauth-2x2xw7bsp-aravindphs.vercel.app/"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 app.set("view engine", "ejs");
 
