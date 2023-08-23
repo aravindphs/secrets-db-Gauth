@@ -11,6 +11,13 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 
 const app = express();
+app.use(cors(
+    {
+        origin: ["https://secrets-db-gauth-2x2xw7bsp-aravindphs.vercel.app/"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 const port = process.env.PORT;
 
 app.set("view engine", "ejs");
