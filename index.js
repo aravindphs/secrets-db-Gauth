@@ -15,7 +15,7 @@ const app = express();
 const port = process.env.PORT;
 app.use(cors(
     {
-        origin: ["https://secrets-db-gauth-2x2xw7bsp-aravindphs.vercel.app/"],
+        origin: ["https://secrets-db-gauth-9uulu8k6k-aravindphs.vercel.app/"],
         methods: ["POST", "GET"],
         credentials: true
     }
